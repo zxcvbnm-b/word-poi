@@ -1,0 +1,201 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 301989888 bytes for Failed to commit area from 0x00000006e0e00000 to 0x00000006f2e00000 of length 301989888.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/BuildAgent/work/5ff2f6c26000d570/src/hotspot/os/windows/os_windows.cpp:3291), pid=339228, tid=339424
+#
+# JRE version:  (11.0.5+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.5+10-b520.30, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:63378,suspend=y,server=n -Dfile.encoding=UTF-8 com.quincy.poi.util.PoiUtils
+
+Host: AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  , 8 cores, 17G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1566)
+Time: Fri Mar 25 16:37:39 2022 中国标准时间 elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000253a60f5000):  JavaThread "Unknown thread" [_thread_in_vm, id=339424, stack(0x000000af64500000,0x000000af64600000)]
+
+Stack: [0x000000af64500000,0x000000af64600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5dcafa]
+V  [jvm.dll+0x70e375]
+V  [jvm.dll+0x70f898]
+V  [jvm.dll+0x70ff63]
+V  [jvm.dll+0x23e238]
+V  [jvm.dll+0x5da1c4]
+V  [jvm.dll+0x5cf265]
+V  [jvm.dll+0x2fac3b]
+V  [jvm.dll+0x2fabaa]
+V  [jvm.dll+0x2faa82]
+V  [jvm.dll+0x2ff956]
+V  [jvm.dll+0x3480d3]
+V  [jvm.dll+0x3487d6]
+V  [jvm.dll+0x3481d3]
+V  [jvm.dll+0x2d5548]
+V  [jvm.dll+0x2d66e7]
+V  [jvm.dll+0x6ed237]
+V  [jvm.dll+0x6eea2c]
+V  [jvm.dll+0x355849]
+V  [jvm.dll+0x6d239e]
+V  [jvm.dll+0x3be283]
+V  [jvm.dll+0x3c0701]
+C  [jli.dll+0x5363]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000253a4638e60, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000253a610d000 GCTaskThread "GC Thread#0" [stack: 0x000000af64600000,0x000000af64700000] [id=339316]
+  0x00000253a6178000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000af64700000,0x000000af64800000] [id=336928]
+  0x00000253a6179800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000af64800000,0x000000af64900000] [id=340776]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9cc565c17]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000253a60f43c0] Heap_lock - owner thread: 0x00000253a60f5000
+
+Heap address: 0x00000006e0e00000, size: 4594 MB, Compressed Oops mode: Non-zero based: 0x00000006e0e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff765570000 - 0x00007ff76557a000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\java.exe
+0x00007ffa0abb0000 - 0x00007ffa0ada5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa09000000 - 0x00007ffa090be000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa082d0000 - 0x00007ffa08598000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa08850000 - 0x00007ffa08950000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9e99c0000 - 0x00007ff9e99d7000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\VCRUNTIME140.dll
+0x00007ff9fe970000 - 0x00007ff9fe989000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\jli.dll
+0x00007ffa090d0000 - 0x00007ffa09270000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa089e0000 - 0x00007ffa08a02000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa0a4c0000 - 0x00007ffa0a4eb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9f7990000 - 0x00007ff9f7c2a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffa08a10000 - 0x00007ffa08b1b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa08e90000 - 0x00007ffa08f2e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa08b70000 - 0x00007ffa08c0d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa09a30000 - 0x00007ffa09a60000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005b3b0000 - 0x000000005b3bc000 	D:\Program Files (x86)\360\360Safe\safemon\SafeWrapper.dll
+0x00007ffa0a250000 - 0x00007ffa0a2fe000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa0a570000 - 0x00007ffa0a60c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa0a120000 - 0x00007ffa0a245000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9f66b0000 - 0x00007ff9f6741000 	D:\Program Files (x86)\360\360Safe\safemon\libzdtp64.dll
+0x00007ffa08d50000 - 0x00007ffa08da5000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007ffa07da0000 - 0x00007ffa07daa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9de270000 - 0x00007ff9de30d000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\msvcp140.dll
+0x00007ff9cc280000 - 0x00007ff9ccd3b000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\server\jvm.dll
+0x00007ffa0a4b0000 - 0x00007ffa0a4b8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9fd9a0000 - 0x00007ff9fd9c7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9f5fd0000 - 0x00007ff9f5fd9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa0a670000 - 0x00007ffa0a6db000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa06130000 - 0x00007ffa06142000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa029c0000 - 0x00007ffa029d1000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\verify.dll
+0x00007ff9f6130000 - 0x00007ff9f6314000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff9f60f0000 - 0x00007ff9f611c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa08950000 - 0x00007ffa089d2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa001f0000 - 0x00007ffa00219000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\java.dll
+0x00007ff9f1090000 - 0x00007ff9f10c8000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\jdwp.dll
+0x00007ff9fe830000 - 0x00007ff9fe847000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\zip.dll
+0x00007ffa03670000 - 0x00007ffa0367b000 	D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;D:\Program Files (x86)\360\360Safe\safemon;D:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\jbr\bin\server
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:63378,suspend=y,server=n -Dfile.encoding=UTF-8 
+java_command: com.quincy.poi.util.PoiUtils
+java_class_path (initial): C:\Users\lenovo\Desktop\poi-office-demo\target\classes;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter\2.5.5\spring-boot-starter-2.5.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot\2.5.5\spring-boot-2.5.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-context\5.3.10\spring-context-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-aop\5.3.10\spring-aop-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-beans\5.3.10\spring-beans-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-expression\5.3.10\spring-expression-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.5.5\spring-boot-autoconfigure-2.5.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.5.5\spring-boot-starter-logging-2.5.5.jar;C:\Users\lenovo\.m2\repository\ch\qos\logback\logback-classic\1.2.6\logback-classic-1.2.6.jar;C:\Users\lenovo\.m2\repository\ch\qos\logback\logback-core\1.2.6\logback-core-1.2.6.jar;C:\Users\lenovo\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.14.1\log4j-to-slf4j-2.14.1.jar;C:\Users\lenovo\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar;C:\Users\lenovo\.m2\repository\org\slf4j\jul-to-slf4j\1.7.32\jul-to-slf4j-1.7.32.jar;C:\Users\lenovo\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-core\5.3.10\spring-core-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\springframework\spring-jcl\5.3.10\spring-jcl-5.3.10.jar;C:\Users\lenovo\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\lenovo\.m2\repository\org\projectlombok\lombok\1.18.20\lombok-1.18.20.jar;C:\Users\lenovo\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\lenovo\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-oox
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 301989888                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4817158144                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_241
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_241\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_241\lib\tools.jar;
+PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\Java\jdk1.8.0_241\bin;C:\Program Files\Java\jdk1.8.0_241\jre\bin;C:\Program Files (x86)\NetSarang\Xshell 7\;C:\Windows\System32;;D:\apache-maven-3.6.3\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\lenovo\AppData\Roaming\npm;C:\Program Files\Docker Toolbox;D:\BaiduNetdiskDownload\gradle-4.6\bin;D:\Program Files\nodejs;C:\Users\lenovo\.dotnet\tools;
+USERNAME=lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1566)
+HyperV virtualization detected
+
+CPU:total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 18370M (415M free)
+TotalPageFile size 31170M (AvailPageFile size 191M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 61M, peak: 348M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.5+10-b520.30) for windows-amd64 JRE (11.0.5+10-b520.30), built on Dec 24 2019 12:06:09 by "" with MS VC++ 14.0 (VS2015)
+
+END.
